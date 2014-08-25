@@ -1,4 +1,8 @@
+require './lib/weather.rb'
+
 class Airport
+
+	include Weather
 
 #	DEFAULT_CAPACITY = 20
 
@@ -12,12 +16,15 @@ class Airport
 	end
 
 	def land(plane)
-		#if capacity is reached, raise an exception
+	 #if capacity is reached, raise an exception
+		raise "You cannot take off in a storm!" if stormy?
 		raise "Airport is full" if full?
+	#	plane.land
 		@planes << plane
 	end
 
 	def takeoff(plane)
+		raise "You cannot take off in a storm!" if stormy?
 		@planes.delete(plane)
 	end
 
