@@ -32,15 +32,4 @@ describe Plane do
 	end
 
 
-	# it 'has a flying status when flying' do
-	#  	expect(plane.fly).to equal true
-	# end
-
- # 	it 'can land' do
- # 		plane.fly
- # 		plane.land
-	# 	expect(plane.land).to equal false
-	# end
-
 end
-

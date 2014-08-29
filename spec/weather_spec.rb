@@ -1,19 +1,8 @@
-# require 'weather'
-
-# class Weather; include Weather end
-
-# describe Weather do
-
-#  	it "should know what the weather is" do
-#  		check_weather = Weather.new
-#  		expect(["sunny", "stormy"]).to include(check_weather.weather)
-#  	end
-#  end
-
 require './lib/weather.rb'
 
  shared_examples 'weather conditions' do 
-  let(:weather) {described_class.new}
+  
+    let(:weather) {Weather.new}
 
     it 'can be stormy' do
       allow(weather).to receive(:rand).and_return(5)
