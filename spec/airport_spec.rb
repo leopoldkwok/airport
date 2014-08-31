@@ -44,8 +44,7 @@ describe Airport do
 		it 'a plane cannot land if the airport is full' do
 		#expect(airport).not_to be_full
 		allow(airport).to receive(:stormy?).and_return(false)	
-
-		 fill_airport airport
+		fill_airport airport
 		 expect(lambda {airport.land(plane)}).to raise_error(RuntimeError)
 		end
 
@@ -73,34 +72,33 @@ end
 # Check when all the planes have landed that they have the right status "landed"
 # Once all the planes are in the air again, check that they have the status of flying!
 
-describe "The grand finale (last spec)" do
+# describe "The grand finale (last spec)" do
 
-	let(:airport) 	{Airport.new}
+# 	let(:airport) 	{Airport.new}
 
-	plane1 = Plane.new
-	plane2 = Plane.new
-	plane3 = Plane.new
-	plane4 = Plane.new
-	plane5 = Plane.new
-	plane6 = Plane.new
+# 	plane1 = Plane.new
+# 	plane2 = Plane.new
+# 	plane3 = Plane.new
+# 	plane4 = Plane.new
+# 	plane5 = Plane.new
+# 	plane6 = Plane.new
 
-	planes = [plane1, plane2, plane3, plane4, plane5, plane6]
+# 	planes = [plane1, plane2, plane3, plane4, plane5, plane6]
 
-	it 'all planes can take off' do
-  		allow(airport).to receive(:stormy?).and_return(false)
- 		planes.each do |plane|
-		airport.takeoff(plane)
-		expect(plane.fly).to be true
-	end
+# 	it 'all planes can take off' do
+#   		allow(airport).to receive(:stormy?).and_return(false)
+#  		planes.each do |plane|
+# 		airport.takeoff(plane)
+# 		expect(plane.fly).to be true
+# 	end
 
-	 #  it 'all planes can land' do
-		# allow(airport).to receive(:stormy?).and_return(false)
- 	#  	planes.each do |plane|
-		# airport.land(plane)
-	 # 	expect(airport.land(plane)).to be false
-	 #  end
+# 	# it 'all planes can land' do
+# 	# 	allow(airport).to receive(:stormy?).and_return(false)
+#  # 	  	planes.each do |plane|
+# 	# 	airport.land(plane)
+# 	#   	expect(airport.land(plane)).to be false
+# 	# end
 
 	
-	end
-
-end
+# 	end
+# end

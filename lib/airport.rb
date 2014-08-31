@@ -19,7 +19,7 @@ class Airport
 	 #if capacity is reached, raise an exception
 		raise "You cannot take off in a storm!" if stormy?
 		raise "Airport is full" if full?
-		#plane.land
+		plane.land!
 		@planes << plane
 	end
 

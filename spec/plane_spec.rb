@@ -15,19 +15,19 @@ describe Plane do
 	end
 
 	it 'has a flying status when in the air' do
-		plane.takeoff
+		plane.takeoff!
 		plane.fly
 		expect(plane.fly).to equal true
 	end
 
 	it 'can take off' do
-		plane.land
-		expect(plane.takeoff).to equal true
+		plane.land!
+		expect(plane.takeoff!).to equal true
 	end
 
 	it 'changes its status to flying after taking off' do
-		plane.land
-		plane.takeoff
+		plane.land!
+		plane.takeoff!
 		expect(plane.fly).to equal true
 	end
 
