@@ -16,7 +16,6 @@ describe Plane do
 
 	it 'has a flying status when in the air' do
 		plane.takeoff!
-		plane.fly
 		expect(plane.fly).to equal true
 	end
 

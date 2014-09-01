@@ -1,5 +1,4 @@
 require 'airport'
-require 'plane'
 require 'weather'
 
 # A plane currently in the airport can be requested to take off
@@ -9,7 +8,7 @@ require 'weather'
 
 describe Airport do
 	let(:airport) 	{Airport.new}
-	let(:plane)		{Plane.new} 
+	let(:plane)		{double :plane, land!:nil, takeoff!:nil} 
 
 	def fill_airport(airport)
  	 20.times {airport.land(Plane.new) }
@@ -30,12 +29,26 @@ describe Airport do
     	expect(airport.plane_count).to eq(1)
 		end
 
+		it 'tells a plane to land when landing a plane' do
+			allow(airport).to receive(:stormy?).and_return(false)	
+			expect(plane).to receive(:land!)
+			airport.land(plane)
+		end
+
 		it 'a plane can take off' do
 		allow(airport).to receive(:stormy?).and_return(false)	
   		airport.land(plane)
   		allow(airport).to receive(:stormy?).and_return(false)	
   		airport.takeoff(plane)
   		expect(airport.plane_count).to eq(0)
+		end
+
+
+		it 'tells a plane to take off when taking off a plane' do
+			allow(airport).to receive(:stormy?).and_return(false)	
+			airport.land(plane)
+			expect(plane).to receive(:takeoff!)
+			airport.takeoff(plane)
 		end
 
 	end
