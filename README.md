@@ -8,6 +8,7 @@ Objectives:
 * Create a set of classes/modules and demonstrate planes taking-off/landing at different airports in different weather conditions
 * Ensure full test coverage throughout using the london-style
 
+
 Your task is to create a set of classes/modules to makes the given test suite pass. You will need to use random number generator to set the weather (it is normally sunny but on rare occasions it may be stormy). In your tests, you'll need to use a double to override random weather. Finally, every plane must have a status indicating whether it's flying or landed.
 
 Technologies used
