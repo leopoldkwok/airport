@@ -1,4 +1,4 @@
-Week 2 Challenge - Airport
+Week 3 Challenge - Airport
 ==========================
 
 Objectives:
