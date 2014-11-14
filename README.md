@@ -1,4 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/leopoldkwok/airport/badges/gpa.svg)](https://codeclimate.com/github/leopoldkwok/airport)
+[![Code Climate](https://codeclimate.com/github/leopoldkwok/airport/badges/gpa.svg)](https://codeclimate.com/github/leopoldkwok/airport)  [![Test Coverage](https://codeclimate.com/github/leopoldkwok/airport/badges/coverage.svg)](https://codeclimate.com/github/leopoldkwok/airport)
 Week 3 Challenge - Airport
 ==========================
 
